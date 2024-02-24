@@ -51,6 +51,9 @@ public class SQLParser {
                 rawPlan.setPredicates(getPredicate(rawPlan.getTable(), sql));
                 rawPlan.setUpdatedValues(getUpdateFunction(rawPlan.getTable(), sql));
             } else if (sql.startsWith(INSERT)) {
+                /**
+                 * 标记插入意向
+                 */
                 rawPlan.setLockMode(LockMode.INSERT_INTENTION);
                 rawPlan.setTable(getTable(sql, INSERT));
                 rawPlan.setInsertTuple(getInsertTuple(sql, rawPlan.getTable(), txnId));
