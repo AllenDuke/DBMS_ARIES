@@ -29,7 +29,7 @@ public class PrimaryTuple implements IPrimaryTuple<PrimaryTuple> {
         this.prev = prev;
         this.txnId = txnId;
         /**
-         * 在主键索引上插入数据时，加上间隙锁，数据在插入意向状态，是为了 “支持” 防止幻读，即如当执行 select lock in share mode的时候，事务能感知到而进行等待。
+         * 在主键索引上插入数据时，加上间隙锁，数据在插入意向状态，是为了 “支持” 防止幻读，即如当执行 select lock in share mode的时候，其他事务能感知到而进行等待。
          *
          * 在innodb的实现中，并不会直接上锁，而是先来一个轻量级的状态标记，发生冲突时再进行锁转换
          * 执行 insert 语句，对要操作的页加 RW-X-LATCH，然后判断是否有和插入意向锁冲突的锁，如果有，加插入意向锁，进入锁等待；如果没有，直接写数据，不加任何锁，结束后释放 RW-X-LATCH；

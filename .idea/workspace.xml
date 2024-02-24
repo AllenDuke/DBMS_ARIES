@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55ce7b3f-d625-4ea7-b837-4bbec401fb34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="55ce7b3f-d625-4ea7-b837-4bbec401fb34" name="Default Changelist" comment="数据插入时，加间隙锁">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/storage/clusterindex/PrimaryTuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/storage/clusterindex/PrimaryTuple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/src/serverlayer/SQLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/src/serverlayer/SQLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/ConcurrencyControl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/ConcurrencyControl.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/DBEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/DBEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/storage/GapLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/storage/GapLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/test/isolationlevel/ReadRepeatableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/test/isolationlevel/ReadRepeatableTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,18 +136,29 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/git-repo/DBMS_ARIES",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/git-repo/DBMS_ARIES/ConcurrencyControl",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -161,7 +175,20 @@
       <recent name="dbms.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TinyDBClientTest">
+  <component name="RunManager" selected="JUnit.ReadRepeatableTest.testInsertLockBlockGapLock (1)">
+    <configuration name="DBClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dbms.DBClient" />
+      <module name="ARIES" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dbms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="ARIES" />
@@ -171,6 +198,38 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadRepeatableTest.testInsertLockBlockGapLock (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ConcurrencyControl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="isolationlevel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="isolationlevel" />
+      <option name="MAIN_CLASS_NAME" value="isolationlevel.ReadRepeatableTest" />
+      <option name="METHOD_NAME" value="testInsertLockBlockGapLock" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadRepeatableTest.testInsertLockBlockGapLock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ARIES" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="isolationlevel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="isolationlevel" />
+      <option name="MAIN_CLASS_NAME" value="isolationlevel.ReadRepeatableTest" />
+      <option name="METHOD_NAME" value="testInsertLockBlockGapLock" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -190,68 +249,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TinyDBClientTest.testRecoverProcessAlsoCouldCrash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ARIES" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dbms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dbms" />
-      <option name="MAIN_CLASS_NAME" value="dbms.TinyDBClientTest" />
-      <option name="METHOD_NAME" value="testRecoverProcessAlsoCouldCrash" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TinyDBClientTest.testTxnWithRandomFlushAndFuzzyCP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ARIES" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dbms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dbms" />
-      <option name="MAIN_CLASS_NAME" value="dbms.TinyDBClientTest" />
-      <option name="METHOD_NAME" value="testTxnWithRandomFlushAndFuzzyCP" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TinyDBClientTest.testTxnWithRandomFlushAndNormalCP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ARIES" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dbms" />
-      <option name="MAIN_CLASS_NAME" value="dbms.TinyDBClientTest" />
-      <option name="METHOD_NAME" value="testTxnWithRandomFlushAndNormalCP" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.DBClient" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ReadRepeatableTest.testInsertLockBlockGapLock (1)" />
+      <item itemvalue="JUnit.ReadRepeatableTest.testInsertLockBlockGapLock" />
       <item itemvalue="JUnit.TinyDBClientTest" />
-      <item itemvalue="JUnit.TinyDBClientTest.testRecoverProcessAlsoCouldCrash" />
-      <item itemvalue="JUnit.TinyDBClientTest.testTxnWithRandomFlushAndNormalCP" />
-      <item itemvalue="JUnit.TinyDBClientTest.testTxnWithRandomFlushAndFuzzyCP" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TinyDBClientTest" />
+        <item itemvalue="JUnit.ReadRepeatableTest.testInsertLockBlockGapLock (1)" />
+        <item itemvalue="JUnit.ReadRepeatableTest.testInsertLockBlockGapLock" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TinyDBClientTest.testTxnWithRandomFlushAndNormalCP" />
-        <item itemvalue="JUnit.TinyDBClientTest.testTxnWithRandomFlushAndFuzzyCP" />
-        <item itemvalue="JUnit.TinyDBClientTest.testRecoverProcessAlsoCouldCrash" />
+        <item itemvalue="Application.DBClient" />
+        <item itemvalue="JUnit.TinyDBClientTest" />
       </list>
     </recent_temporary>
   </component>
@@ -267,8 +278,17 @@
       <option name="presentableId" value="Default" />
       <updated>1590460890076</updated>
       <workItem from="1590488718514" duration="39129000" />
-      <workItem from="1708758397673" duration="4882000" />
+      <workItem from="1708758397673" duration="8901000" />
+      <workItem from="1708768426152" duration="10027000" />
     </task>
+    <task id="LOCAL-00001" summary="数据插入时，加间隙锁">
+      <created>1708764222862</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708764222862</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -345,6 +365,21 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="数据插入时，加间隙锁" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据插入时，加间隙锁" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

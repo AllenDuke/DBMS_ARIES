@@ -125,6 +125,7 @@ public class DBEngine implements IDBEngine {
         ITable table = physicalPlan.getTable();
         ITuple toBeAdd = physicalPlan.getInsertTuple();
         ITuple gap = table.getClusterIndex().findTuple(toBeAdd);
+        // 如果当前插入值的id是最大的，那么gap是虚拟的
         synchronized (gap) {
             // check duplicate
             boolean isDuplicateKey = table.getClusterIndex().containsKey(toBeAdd);
@@ -141,6 +142,7 @@ public class DBEngine implements IDBEngine {
             IIsolationLevel isolationLevel = physicalPlan.getIsolationLevel();
             isolationLevel.addLock(mode, gap);
             for (IIndex index : table.secondaryIndexes()) {
+                // 非聚集索引，在第一个索引节点上加间隙锁
                 physicalPlan.getIsolationLevel().lockIfVisible(index.findTuple(toBeAdd), mode, null, null);
             }
             // insert then add record lock
