@@ -58,6 +58,7 @@ public class DBClient {
             String output = dbEngine.getNextRow();
             if (output == null) break;
             haveData = true;
+            // fixme 单测依靠打印顺序
             retOutput.add(physicalPlan.getTxnId() + ":" + output);
             System.out.println(retOutput.get(retOutput.size() - 1));
         }

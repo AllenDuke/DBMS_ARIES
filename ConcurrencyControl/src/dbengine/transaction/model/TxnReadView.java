@@ -10,6 +10,7 @@ public class TxnReadView {
     private final int lowWaterMark, highWaterMark, createdTxnId;
 
     public TxnReadView(int curTxnId) {
+        // 拷贝视图创建时的活跃事务快照
         unCommittedTxnGroup = DBEngineGlobalEnvironment.getUnCommitedTxnGroup();
         lowWaterMark = unCommittedTxnGroup.first();
         highWaterMark = SystemCatalog.getMaxTxnId();

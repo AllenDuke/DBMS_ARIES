@@ -12,8 +12,10 @@ public class RepeatableRead extends IsolationLevelCommon {
     @Override
     public ITuple lockIfVisible(ITuple toBeLocked, LockMode lockMode, TxnReadView readView, LockStrategy strategy) {
         if (lockMode == null) {
+            // 无锁，即快照读，寻找可见版本
             return findVisibleTuple(toBeLocked, readView);
         }
+        // 有锁，即当前读，直接从链表头节点开始加锁，头节点为最新值，new->old
         return acquireLockImprovementInRR(toBeLocked, lockMode, strategy);
     }
 

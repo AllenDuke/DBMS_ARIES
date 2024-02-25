@@ -28,6 +28,7 @@ public abstract class IsolationLevelCommon  implements IIsolationLevel{
         if (toBeLocked.isPrimary()) {
             IDeltaStorageRecordIterator pointer = (IDeltaStorageRecordIterator) toBeLocked;
             while (pointer != null && !readView.isVisble(pointer.getTxnId())) {
+                // 寻找可见版本
                 pointer = pointer.getPrevVersionRecord();
             }
             if (pointer == null) {

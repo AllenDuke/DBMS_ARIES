@@ -61,6 +61,7 @@ public class DBEngine implements IDBEngine {
 
         // 2. check need to add lock and check if have multiple version, it should return visible one
         LockStrategy strategy = new LockStrategy(isFirstTuple && physicalPlan.isTargetIsTreeSearchWithEqualExp());
+        // 实际上，当select for update时，当遍历到这个节点时，是因为独占锁而导致事务发生等待
         ret = isolationLevel.lockIfVisible(ret, physicalPlan.getLockMode(),
                 physicalPlan.getReadView(), strategy);
         isFirstTuple = false;
@@ -148,6 +149,7 @@ public class DBEngine implements IDBEngine {
             // insert then add record lock
             ITuple ret = table.getClusterIndex().insert(toBeAdd);
             assert ret != null;
+            // 插入时，该节点标记独占锁
             isolationLevel.addLock(LockMode.EXCLUSIVE, ret);
             for (IIndex index : table.secondaryIndexes()) {
                 if (index.insert(ret) == null) {

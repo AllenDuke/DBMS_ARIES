@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55ce7b3f-d625-4ea7-b837-4bbec401fb34" name="Default Changelist" comment="数据插入时，加间隙锁">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="55ce7b3f-d625-4ea7-b837-4bbec401fb34" name="Default Changelist" comment="注释">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/ConcurrencyControl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/ConcurrencyControl.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/DBEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/DBEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/storage/GapLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/storage/GapLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/transaction/IsolationLevelCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/transaction/IsolationLevelCommon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/transaction/RepeatableRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/transaction/RepeatableRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/transaction/model/TxnReadView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/src/dbengine/transaction/model/TxnReadView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrencyControl/src/dbms/DBClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/src/dbms/DBClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConcurrencyControl/test/isolationlevel/ReadRepeatableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrencyControl/test/isolationlevel/ReadRepeatableTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +49,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../Program Files/Java/jdk1.8.0_361/src.zip!/java/util/Collections.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -134,33 +137,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/git-repo/DBMS_ARIES/ConcurrencyControl",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/git-repo/DBMS_ARIES/ConcurrencyControl&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="dbms" />
@@ -279,7 +282,8 @@
       <updated>1590460890076</updated>
       <workItem from="1590488718514" duration="39129000" />
       <workItem from="1708758397673" duration="8901000" />
-      <workItem from="1708768426152" duration="10027000" />
+      <workItem from="1708768426152" duration="16023000" />
+      <workItem from="1708830525403" duration="5188000" />
     </task>
     <task id="LOCAL-00001" summary="数据插入时，加间隙锁">
       <created>1708764222862</created>
@@ -288,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708764222862</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="注释">
+      <created>1708789860976</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708789860976</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -377,11 +388,108 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1a3e55d0-9618-459b-a834-4c4513b09614">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="71b955f7-5526-4475-b45a-3c38d13530ba">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:D:/git-repo/DBMS_ARIES/ConcurrencyControl" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1a3e55d0-9618-459b-a834-4c4513b09614" value="TOOL_WINDOW" />
+        <entry key="71b955f7-5526-4475-b45a-3c38d13530ba" value="TOOL_WINDOW" />
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="数据插入时，加间隙锁" />
-    <option name="LAST_COMMIT_MESSAGE" value="数据插入时，加间隙锁" />
+    <MESSAGE value="注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="注释" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ConcurrencyControl/src/dbms/DBClient.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ConcurrencyControl/src/serverlayer/SQLParser.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ConcurrencyControl/src/dbengine/storage/clusterindex/PrimaryIndex.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ConcurrencyControl/src/dbengine/DBEngine.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ConcurrencyControl/src/dbengine/DBEngine.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ConcurrencyControl/src/dbengine/transaction/IsolationLevelCommon.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="tid2prevLsn.get(tid)" language="JAVA" />
